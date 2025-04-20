@@ -49,9 +49,9 @@ export default function AudioUploader() {
 
     const formData = new FormData()
     formData.append("file", file);
-
+    console.log("url",process.env.NEXT_PUBLIC_BACKEND_URL)
     try {
-      const res = await axios.post("http://localhost:8000/upload-audio/",
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/upload-audio/`,
         formData,
         {
           headers: {
@@ -97,7 +97,7 @@ export default function AudioUploader() {
   };
 
   const handlePdfDownload = async ()  => {
-    const res = await axios.get(`http://localhost:8000/download-summary?pdf_filename=${pdfurl}`, {
+    const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/download-summary?pdf_filename=${pdfurl}`, {
       responseType: 'blob'
     })
     if (!res.data) {

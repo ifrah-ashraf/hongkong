@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from app.utils.models import UserSchema
-from app.utils.token_handler import sign_jwt
+from backend.utils.models import UserSchema
+from backend.utils.token_handler import sign_jwt
 
 
 router = APIRouter()

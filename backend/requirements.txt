@@ -4,9 +4,9 @@ fastapi==0.115.12
 protobuf==6.30.2
 pydantic==2.11.3
 pydub==0.25.1
-PyJWT==2.8.0
 PyJWT==2.10.1
 python-decouple==3.8
 reportlab==4.4.0
 torch==2.6.0
 transformers==4.51.2
+uvicorn[standard]==0.29.0
