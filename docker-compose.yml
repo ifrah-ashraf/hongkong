@@ -4,8 +4,6 @@ services:
       context: .
       dockerfile: backend/Dockerfile
     container_name: fastapi-backend
-    volumes:
-      - ./backend:/app
     ports:
       - "8000:8000"
     env_file:

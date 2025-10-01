@@ -12,3 +12,4 @@ transformers==4.51.2
 uvicorn[standard]==0.29.0
 google-generativeai
 python-multipart
+huggingface_hub[hf_xet]

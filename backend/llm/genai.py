@@ -4,7 +4,7 @@ from decouple import config
 
 MAX_CHAR_LENGTH = 10000  
 CHUNK_WRAP = 9000        
-GEMINI_MODEL = "models/gemini-1.5-flash"
+GEMINI_MODEL = "models/gemini-flash-latest"
 GEMINAI_API = config("GEMINI_API")
 
 genai.configure(api_key=GEMINAI_API)

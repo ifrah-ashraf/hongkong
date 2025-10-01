@@ -4,6 +4,7 @@ RUN apt-get update && apt-get install -y \
     ffmpeg \
     git \
     build-essential \
+    libgit2-dev \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
