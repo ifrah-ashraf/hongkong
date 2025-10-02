@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-COPY backend/requirements.txt .
+# Copy requirements from backend context
+COPY requirements.txt .
 
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
@@ -19,7 +20,8 @@ ENV TRANSFORMERS_CACHE=/app/cache
 
 RUN mkdir -p /app/cache
 
-COPY backend/ ./backend/
+# Copy everything from backend/
+COPY . .
 
 EXPOSE 8000
 
